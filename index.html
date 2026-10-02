@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e6e5e5;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            width: 400px;
+            max-width: 600px;
+            margin: 2rem auto;
+            background-color: #040c79;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0.25rem 0.25rem 0.25rem rgb(80, 79, 79);
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+
+        }
+
+        .tabuadaDiv {
+            margin-right: 2rem;
+            font-size: 3rem;
+            font-weight: bold;
+
+        }
+
+        input {
+            margin-top: 0.5rem;
+            padding: 1rem;
+            font-size: 1rem;
+            text-align: center;
+            background-color: #040c79;
+            color: white;
+            border-radius: 0.5rem;
+            border: white solid 0.2rem;
+        }
+
+        #btnCalcularId {
+            padding: 1rem;
+            color: white;
+            background-color: #339b03;
+            border-radius: 0.5rem;
+            border: black solid 0.2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        #btnNovaTabuadaId {
+            padding: 1rem;
+            color: white;
+            background-color: #d14605;
+            border-radius: 0.5rem;
+            border: black solid 0.2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img src="./tools.png" alt="Icone de ferramentas" class="img" />
+        <h1>TABUADADEV</h1>
+
+        <div class="campo">
+            <label for="multiplicandoId">Multiplicando:</label>
+            <input type="text" name="txtMultiplicando" id="multiplicandoId">
+        </div>
+
+        <div class="campo">
+
+            <label for="multiplicadorMinId">Mínimo Multiplicador:</label>
+            <input type="text" name="txtMinMultiplicador" id="multiplicadorMinId">
+        </div>
+
+        <div class="campo">
+
+            <label for="multiplicadorMaxId">Máximo Multiplicador:</label>
+            <input type="text" name="txtMaxMultiplicador" id="multiplicadorMaxId">
+        </div>
+
+        <button type="button" onclick="calcularTabuada()" id="btnCalcularId">Calcular</button>
+        <button type="button" onclick="novaTabuada()" id="btnNovaTabuadaId">Nova Tabuada</button>
+
+    </main>
+    <div id="resultado" class="tabuadaDiv"></div>
+    <script src="./calculadora.js"></script>
+</body>
+
+</html>
