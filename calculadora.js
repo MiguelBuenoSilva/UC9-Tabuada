@@ -1,7 +1,7 @@
 function calcularTabuada() {
-    const numMultiplicando = document.getElementById("multiplicandoId").value;
-    const minMultiplicador = document.getElementById("multiplicadorMinId").value;
-    const maxMultiplicador = document.getElementById("multiplicadorMaxId").value;
+    const numMultiplicando = Number(document.getElementById("multiplicandoId").value);
+    const minMultiplicador = Number(document.getElementById("multiplicadorMinId").value);
+    const maxMultiplicador = Number(document.getElementById("multiplicadorMaxId").value);
 
 
     const resultadoDIV = document.getElementById("resultado");
